@@ -4,7 +4,8 @@
  */
 package prueba1;
 
-import java.util.Scanner /**
+import java.util.Scanner;
+        /**
          *
          * @author carpui
          */
