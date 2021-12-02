@@ -5,10 +5,11 @@
 package prueba1;
 
 import java.util.Scanner;
-        /**
-         *
-         * @author carpui
-         */
+
+/**
+ *
+ * @author carpui
+ */
 
 public class Prueba1 {
 
@@ -17,14 +18,21 @@ public class Prueba1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int temperatura;
+        String mun, basura;
+        double temp;
         Scanner read = new Scanner(System.in);
-        System.out.println("Indica cual es la temperatura donde te encuentras");
-        temperatura = read.nextInt();
-        if (temperatura < 0) {
-            System.out.println("La temperatura es negativa.");
-        } else {
-            System.out.println("La temperatura en positiva.");
+
+        for (int i = 1; i <= 5; i++) {
+            System.out.print("Escribe un municipio: ");
+            mun = read.nextLine();
+            basura = read.nextLine();
+            System.out.print("Dime su temperatura: ");
+            temp = read.nextInt();
+            if (temp < 0) {
+                System.out.println("La temperatura de "+mun+" es negativa.");
+            }else {
+                System.out.println("La temperatura de "+mun+" es positiva.");
+            }
         }
     }
 
