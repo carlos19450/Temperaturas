@@ -4,10 +4,11 @@
  */
 package prueba1;
 
-/**
- *
- * @author carpui
- */
+import java.util.Scanner /**
+         *
+         * @author carpui
+         */
+
 public class Prueba1 {
 
     /**
@@ -15,7 +16,15 @@ public class Prueba1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Bienvenido!");
+        int temperatura;
+        Scanner read = new Scanner(System.in);
+        System.out.println("Indica cual es la temperatura donde te encuentras");
+        temperatura = read.nextInt();
+        if (temperatura < 0) {
+            System.out.println("La temperatura es negativa.");
+        } else {
+            System.out.println("La temperatura en positiva.");
+        }
     }
-    
+
 }
