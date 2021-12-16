@@ -14,6 +14,7 @@ public class TemperaturasCarlos {
 
     public static void main(String[] args) {
         // TODO code application logic here
+        String mun;
         int cant;
         double menor = Double.MAX_VALUE, mayor = Double.MIN_VALUE, temp = 0;
         Scanner read = new Scanner(System.in);
@@ -21,7 +22,9 @@ public class TemperaturasCarlos {
         System.out.println("¿Cuantos municipios quiere poner para saber su temperatura?");
         cant = read.nextInt();
         double[] num = new double[cant];
-
+        System.out.println("Dime el nombre de los municipios: ");
+        mun = read.next();
+        String[] num2 = new String[cant];
         //Bucles 1 array
         for (int i = 0; i < num.length; i++) {
             System.out.print("Dime la temperatura: ");
