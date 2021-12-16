@@ -14,21 +14,20 @@ public class TemperaturasCarlos {
 
     public static void main(String[] args) {
         // TODO code application logic here
-        String mun, basura;
         int cant;
-        double menor = 10000, mayor = -10000, temp, tempactual;
+        double menor = Double.MAX_VALUE, mayor = Double.MIN_VALUE, temp = 0;
         Scanner read = new Scanner(System.in);
 
         System.out.println("¿Cuantos municipios quiere poner para saber su temperatura?");
         cant = read.nextInt();
+        double[] num = new double[cant];
 
-        //Bucle
-        for (int i = 1; i <= cant; i++) {
-            //System.out.print("Escribe un municipio: ");
-            //mun = read.nextLine();
-            //basura = read.nextLine();
+        //Bucles 1 array
+        for (int i = 0; i < num.length; i++) {
             System.out.print("Dime la temperatura: ");
-            temp = read.nextDouble();
+            num[i] = read.nextDouble();
+            temp = num[i];
+            //temp = read.nextDouble();
             if (temp < 0) {
                 System.out.println("La temperatura de " + temp + " es negativa.\n");
             } else {
@@ -41,7 +40,17 @@ public class TemperaturasCarlos {
                 mayor = temp;
             }
         }
-        System.out.println("La temperatura menor es: " + menor + "\n La temperatuera mayor es: " + mayor);
+        //Bucles 2 array
+        double acum;
+        System.out.println("Las temperaturas son:\n");
+        for (int i = 0; i < num.length; i++) {
+            acum = num[i];
+            System.out.println(acum);
+        }
+        System.out.println("");
+        //Temperatura mayor y menor
+        System.out.println("La temperatura menor es: " + menor);
+        System.out.println("La temperatuera mayor es: " + mayor);
     }
-    
+
 }
