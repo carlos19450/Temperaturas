@@ -7,11 +7,24 @@ package temperaturascarlos;
 import java.util.Scanner;
 
 /**
+ * Clase de temperatura que calcula la tempreatura de varios muniicpios y los
+ * comapra.
+ *
+ * @author carpui
+ * @version alpha
+ */
+/**
+ * Clase TemperaturasCarlos para hacer tests
  *
  * @author carpui
  */
 public class TemperaturasCarlos {
 
+    /**
+     * Esta es la funcion principal
+     *
+     * @param args Argumentos de entrada de linea de comandos.
+     */
     public static void main(String[] args) {
         // TODO code application logic here
         int cant;
@@ -20,9 +33,9 @@ public class TemperaturasCarlos {
 
         System.out.println("¿Cuantos municipios quiere poner para saber su temperatura?");
         cant = read.nextInt();
-        String[] mun = new String[cant]; 
+        String[] mun = new String[cant];
         double[] num = new double[cant];
-        
+
         //Bucles 1 array
         for (int i = 0; i < num.length; i++) {
             System.out.println("Dime el nombre del municipio:");
@@ -42,18 +55,18 @@ public class TemperaturasCarlos {
                 mayor = temp;
             }
         }
-        
+
         //Bucles 2 array
         double acum;
         System.out.println("");
         for (int i = 0; i < num.length; i++) {
             acum = num[i];
-            System.out.println("Las temperaturas de "+mun[i]+" es: "+acum+"\n");
+            System.out.println("Las temperaturas de " + mun[i] + " es: " + acum + "\n");
         }
         System.out.println("");
-        
+
         //Temperatura mayor y menor
-        System.out.println("El municipio  de la temperatura mayor es " + menor);
+        System.out.println("El municipio  de la temperatura menor es " + menor);
         System.out.println("La temperatuera mayor es: " + mayor);
     }
 
